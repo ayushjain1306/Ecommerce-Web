@@ -44,7 +44,7 @@ const Heading = styled('h2')(({ theme }) => ({
     color: "#5e17eb",
     fontWeight: "bold",
     [theme.breakpoints.down('sm')]: {
-        fontSize: "20px",
+        fontSize: "18px",
         textAlign: "left",
         marginTop: "2vh",
         marginLeft: "2vw"
@@ -96,7 +96,7 @@ const Heading2 = styled('h2')(({ theme }) => ({
     fontWeight: "bold",
     [theme.breakpoints.down('sm')]: {
         display: "block",
-        fontSize: "18px",
+        fontSize: "20px",
         textAlign: "left",
         marginTop: "2vh",
         marginLeft: "2vw"
@@ -125,7 +125,7 @@ const AnotherHeading2 = styled('div')(({ theme }) => ({
     fontSize: "20px",
     marginTop: "4vh",
     [theme.breakpoints.down('sm')]: {
-        display: "block",
+        display: "none",
         textAlign: "left",
         marginLeft: "2vw",
         marginTop: "2vh",
