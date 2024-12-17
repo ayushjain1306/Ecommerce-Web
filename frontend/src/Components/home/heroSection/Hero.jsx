@@ -96,7 +96,7 @@ const Heading2 = styled('h2')(({ theme }) => ({
     fontWeight: "bold",
     [theme.breakpoints.down('sm')]: {
         display: "block",
-        fontSize: "20px",
+        fontSize: "24px",
         textAlign: "left",
         marginTop: "2vh",
         marginLeft: "2vw"
