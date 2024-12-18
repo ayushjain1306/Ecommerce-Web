@@ -72,6 +72,12 @@ function DialogBox({ open, setOpen, loading, setLoading }) {
         setLoad(true)
     }
 
+    const addImage = () => {
+        if (image){
+            setInput({...input, image: [...input.image, image]});
+        }
+    }
+
     const addSize = () => {
         if (size.name === "") {
             setSizeError("This field cannot be empty.");
@@ -203,7 +209,7 @@ function DialogBox({ open, setOpen, loading, setLoading }) {
                             required
                             onChange={(e) => setImage(e.target.files[0])}
                         />
-                        <Button variant="contained" color="warning" onClick={() => setInput({...input, image: [...input.image, image]})}>Add</Button>
+                        <Button variant="contained" color="warning" onClick={addImage}>Add</Button>
                     </div>
                     <span style={{ color: "red", fontSize: "12px" }}>{imageError}</span><br />
 

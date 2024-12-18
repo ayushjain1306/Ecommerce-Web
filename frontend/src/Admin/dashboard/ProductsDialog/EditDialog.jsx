@@ -6,7 +6,10 @@ import { editProduct } from "../../../apis/adminApis/productsApi";
 import { Close } from "@mui/icons-material";
 
 const StyledDialogTitle = styled(DialogTitle)(({ theme }) => ({
-    width: "35vw"
+    width: "35vw",
+    [theme.breakpoints.down('lg')]: {
+        width: "100%"
+    }
 }))
 
 const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
