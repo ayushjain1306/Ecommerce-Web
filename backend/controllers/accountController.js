@@ -128,7 +128,11 @@ async function logoutWork(request, response){
             return response.status(200).json({message: "Token Not Found."});
         }
 
-        response.clearCookie("token");
+        response.clearCookie("token", {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
+        });
 
         return response.status(200).json({message: "User Logged Out Successfully."});
     }

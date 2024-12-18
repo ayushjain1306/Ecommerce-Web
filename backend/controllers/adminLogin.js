@@ -57,7 +57,11 @@ export async function adminLogout(request, response) {
             return response.status(200).json({ message: "Token Not Found." });
         }
 
-        response.clearCookie("token");
+        response.clearCookie("token", {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
+        });
 
         return response.status(200).json({message: "Admin Logged Out Successfully."});
     }
