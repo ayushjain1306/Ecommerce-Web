@@ -13,7 +13,7 @@ const StyledDialogTitle = styled(DialogTitle)(({ theme }) => ({
 }))
 
 const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
-    width: "35vw"
+    
 }))
 
 const style = {
