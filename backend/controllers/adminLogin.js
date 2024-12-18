@@ -26,7 +26,7 @@ async function adminLogin(request, response) {
         response.cookie("token", token, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict"
+            sameSite: "none"
         })
 
         response.status(200).json({ message: "Admin Logged In Successfully." });

@@ -37,6 +37,16 @@ const Image = styled('img')(({theme}) => ({
     }
 }))
 
+const ProductDiv = styled('div')(({theme}) => ({
+    border: "1px solid #e3e3e3", 
+    padding: "18px 0px", 
+    margin: "0px 10px", 
+    borderRadius: "3px",
+    [theme.breakpoints.down('sm')]: {
+        margin: "0px 4px"
+    }
+}))
+
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
@@ -88,13 +98,13 @@ function LatestProducts() {
                     {
                         products.map((product) => {
                             return (
-                                <div key={product._id} style={{ border: "1px solid #e3e3e3", padding: "18px 0px", margin: "0px 10px", borderRadius: "3px" }}>
+                                <ProductDiv key={product._id}>
                                     <Link to={`/shopping/${product._id}`} style={{ color: "inherit", textDecoration: "inherit" }}>
                                         <Image src={product.image[0]} alt="product-Pic" />
                                         <Typography style={{ width: "80%", margin: "auto", marginTop: "10px", fontSize: "17px" }}>{product.name.length > 15 ? product.name.substring(0, 15) + "..." : product.name}</Typography>
                                         <Typography style={{ color: "green", fontWeight: "bold" }}>Rs. {product.price}</Typography>
                                     </Link>
-                                </div>
+                                </ProductDiv>
                             )
                         })
                     }

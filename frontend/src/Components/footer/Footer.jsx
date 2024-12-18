@@ -1,5 +1,4 @@
 import { Typography, List, ListItem, styled } from "@mui/material";
-import { Link } from "react-router-dom";
 import { Phone, Email } from "@mui/icons-material";
 
 const StyledDiv = styled('div')(({theme}) => ({
@@ -88,7 +87,6 @@ function Footer() {
                 <NewList>
                     <NewListItem><Phone fontSize="small" style={{marginRight: "1vw"}} /> <Typography style={{fontSizwe: "14px"}}>+1234567890</Typography></NewListItem>
                     <NewListItem><Email fontSize="small" style={{marginRight: "1vw"}} /> <Typography style={{fontSizwe: "14px"}}>company-email@gmail.com</Typography></NewListItem>
-                    <Link to="admin">a</Link>
                 </NewList>
             </ThirdDiv>
         </StyledDiv>
